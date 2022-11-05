@@ -78,6 +78,18 @@ extension MoodsApi {
         }
     }
 
+    func getSadnessCarefullyCalculatedByMLGuy(completion: @escaping ([SadnessIndex]?, Error?) -> Void) {
+        guard let url = Bundle(for: Self.self).url(forResource: "weeklySadness", withExtension: "json") else {
+            completion(nil, nil)
+            return
+        }
+        let data = try! Data(contentsOf: url)
+
+        let decodedData = try! CustomDecoder().decode([SadnessIndex].self, from: data)
+
+        completion(decodedData, nil)
+    }
+
     func getUser(completion: @escaping (User?, Error?) -> Void) {
         Task {
             do {

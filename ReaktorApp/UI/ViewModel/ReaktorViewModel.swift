@@ -5,40 +5,33 @@ final class ReaktorViewModel: ObservableObject {
 
     @Published var state: VMState = .loading
 
-    var graphs: [Graph]
-    private var api: API
+    var sadness: [SadnessIndex]
+    private var api: MoodsApi
 
-    init(api: API = MoodsApi(),
-         graphs: [Graph] = []) {
+    init(api: MoodsApi = MoodsApi(),
+         sadness: [SadnessIndex] = []) {
         self.api = api
-        self.graphs = graphs
+        self.sadness = sadness
     }
 
     func onAppear() {
-        guard !isRunningOnPreviews() else {
-            return
-        }
 
         if state == .loading {
             Task {
-                await fetchGraphs()
+                await fetchSadness()
             }
         }
     }
 
-    @MainActor
-    func fetchGraphs() async {
+    func fetchSadness() async {
+        self.api.getSadnessCarefullyCalculatedByMLGuy { sadness, error in
 
-        self.state = .completed
-        return
-
-        do {
-            let graphs: [Graph] = try await api.request(ReaktorListRequest(), method: .GET)
-            self.graphs = graphs
-            self.state = .completed
-        } catch {
-            self.graphs = []
-            self.state = .error(error.localizedDescription)
+            DispatchQueue.main.async {
+                if let sadness = sadness {
+                    self.sadness = sadness
+                }
+                self.state = .completed
+            }
         }
     }
 }

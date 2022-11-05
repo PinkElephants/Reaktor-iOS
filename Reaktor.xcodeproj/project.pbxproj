@@ -27,6 +27,7 @@
 		4E788EC22916C53500C794E3 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E788EC12916C53500C794E3 /* Charts.framework */; };
 		4E788EC42916DDBD00C794E3 /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EC32916DDBD00C794E3 /* IntroScreen.swift */; };
 		4E7B16C52916F8E500AE426A /* weeklySadness.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E7B16C42916F8E500AE426A /* weeklySadness.json */; };
+		4E7B16C72916F92200AE426A /* SadnessIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B16C62916F92200AE426A /* SadnessIndex.swift */; };
 		88CFD40226136D370090B26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40126136D370090B26A /* AppDelegate.swift */; };
 		88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40326136D370090B26A /* SceneDelegate.swift */; };
 		88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CFD40A26136D3A0090B26A /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		4E788EC12916C53500C794E3 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = System/Library/Frameworks/Charts.framework; sourceTree = SDKROOT; };
 		4E788EC32916DDBD00C794E3 /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		4E7B16C42916F8E500AE426A /* weeklySadness.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weeklySadness.json; sourceTree = "<group>"; };
+		4E7B16C62916F92200AE426A /* SadnessIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadnessIndex.swift; sourceTree = "<group>"; };
 		4EE8FCDA2915ADA900EA7150 /* Reaktor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reaktor.entitlements; sourceTree = "<group>"; };
 		88CFD3FE26136D370090B26A /* Reaktor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reaktor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CFD40126136D370090B26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				B9AF437728F9C7B500ED73C1 /* Validators */,
 				B9AF436B28F8CEAF00ED73C1 /* Request */,
 				B9AF435928F8B92F00ED73C1 /* Endpoints */,
+				4E7B16C62916F92200AE426A /* SadnessIndex.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				88CFD40226136D370090B26A /* AppDelegate.swift in Sources */,
 				B9AF437928F9C7BD00ED73C1 /* Validators.swift in Sources */,
 				B9AF434928F8841600ED73C1 /* ReaktorViewStates.swift in Sources */,
+				4E7B16C72916F92200AE426A /* SadnessIndex.swift in Sources */,
 				4E6C03C92915A03C00F44669 /* Graph.swift in Sources */,
 				B9AF435628F8B45600ED73C1 /* GraphRow.swift in Sources */,
 				B9AF436E28F8D03800ED73C1 /* ErrorPage.swift in Sources */,

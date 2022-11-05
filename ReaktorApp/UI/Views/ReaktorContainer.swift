@@ -48,7 +48,7 @@ struct ReaktorContainer: View {
                     case .error(let reason):
                         ErrorPage(errorReason: reason) {
                             Task {
-                                await viewModel.fetchGraphs()
+                                await viewModel.fetchSadness()
                             }
                         }.navigationTitle(Text("Error :("))
                 }
@@ -61,7 +61,7 @@ struct ReaktorContainer: View {
 struct ReaktorContainer_Previews: PreviewProvider {
 
     static var viewModelWithContent: ReaktorViewModel {
-        let vm = ReaktorViewModel(graphs: [])
+        let vm = ReaktorViewModel(sadness: [])
         vm.state = .completed
         return vm
     }
