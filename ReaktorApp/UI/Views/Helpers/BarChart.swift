@@ -18,7 +18,7 @@ struct BarChart: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            GroupBox("Your daily mood score") {
+            GroupBox("Your daily mood") {
                 Chart {
                     ForEach(sadness) {
                         LineMark(

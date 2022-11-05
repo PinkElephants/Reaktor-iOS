@@ -21,21 +21,20 @@ struct ReaktorContainer: View {
         NavigationView {
             VStack(spacing: 16) {
                 switch viewModel.state {
-                    case .loading:
-                        ProgressView()
-                            .navigationTitle(Text("Loading..."))
-                    case .completed:
+                case .loading, .completed:
                     LinearGradient.heale.overlay(
                         ScrollView {
                             VStack(alignment: .leading, spacing: 16) {
+                                ScoreHeader()
                                 if spotifyAccess == false {
                                     Button {
                                         tabSelection = 2
                                     } label: {
                                         SpotifyWarning()
                                     }
+                                } else {
+                                    BarChart(sadness: viewModel.sadness)
                                 }
-                                BarChart(sadness: viewModel.sadness)
                                 Spacer()
                             }
                             .padding([.leading], 12)
