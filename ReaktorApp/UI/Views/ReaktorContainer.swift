@@ -8,7 +8,12 @@ import SwiftUI
 ///
 struct ReaktorContainer: View {
 
+    @State var spotifyAccess: Bool = false
     @StateObject var viewModel: ReaktorViewModel = .init()
+
+    init(spotifyAccess: State<Bool>) {
+        self._spotifyAccess = spotifyAccess
+    }
 
     var body: some View {
         NavigationView {
@@ -20,7 +25,9 @@ struct ReaktorContainer: View {
                     case .completed:
                     LinearGradient.heale.overlay(
                         VStack(alignment: .leading, spacing: 16) {
-                            SpotifyWarning()
+                            if spotifyAccess == false {
+                                SpotifyWarning()
+                            }
                             Spacer()
                         }
                         .padding([.leading], 8)
@@ -65,15 +72,12 @@ struct ReaktorContainer_Previews: PreviewProvider {
     }
 
     static var previews: some View {
+
+        @State var access: Bool = true
+
         return Group {
-            ReaktorContainer(viewModel: viewModelWithContent)
+            ReaktorContainer(spotifyAccess: _access)
                 .previewDisplayName("Content State")
-
-            ReaktorContainer(viewModel: viewModelWithLoading)
-                .previewDisplayName("Loading State")
-
-            ReaktorContainer(viewModel: viewModelWithError)
-                .previewDisplayName("Error State")
         }
     }
 }

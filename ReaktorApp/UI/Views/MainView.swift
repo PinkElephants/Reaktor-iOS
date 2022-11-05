@@ -9,24 +9,28 @@ import SwiftUI
 
 struct MainView: View {
 
+    @State var selection = 0
+    @State var spotifyAccess = false
+
     var body: some View {
-        TabView {
-            ReaktorContainer(viewModel: ReaktorViewModel())
+
+        TabView(selection: $selection) {
+            ReaktorContainer(spotifyAccess: _spotifyAccess)
                 .padding([.bottom], 16)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
-                }
+                }.tag(0)
 
             DetailsContainer(viewModel: DetailsViewModel())
                 .padding([.bottom], 16)
                 .tabItem {
                     Label("Details", systemImage: "list.dash")
-                }
-            SettingsContainer()
+                }.tag(1)
+            SettingsContainer(spotifyAccess: _spotifyAccess)
                 .padding([.bottom], 16)
                 .tabItem {
                     Label("User profile", systemImage: "person.crop.circle")
-                }
+                }.tag(2)
         }
     }
 }

@@ -22,7 +22,7 @@ struct DetailsContainer: View {
                 )
                     .toolbar {
                         ToolbarItem(placement: .principal) {
-                            UserHeader().padding([.top], 64)
+                            HealeHeader(text: "Daily details").padding([.top], 64)
                         }
                     }
             }
