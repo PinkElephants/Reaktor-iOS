@@ -90,6 +90,18 @@ extension MoodsApi {
         completion(decodedData, nil)
     }
 
+    func getChartCarefullyCalculatedByMLGuy(completion: @escaping ([SadnessChart]?, Error?) -> Void) {
+        guard let url = Bundle(for: Self.self).url(forResource: "happiesSaddies", withExtension: "json") else {
+            completion(nil, nil)
+            return
+        }
+        let data = try! Data(contentsOf: url)
+
+        let decodedData = try! CustomDecoder().decode([SadnessChart].self, from: data)
+
+        completion(decodedData, nil)
+    }
+
     func getUser(completion: @escaping (User?, Error?) -> Void) {
         Task {
             do {

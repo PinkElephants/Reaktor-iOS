@@ -26,19 +26,21 @@ struct ReaktorContainer: View {
                             .navigationTitle(Text("Loading..."))
                     case .completed:
                     LinearGradient.heale.overlay(
-                        VStack(alignment: .leading, spacing: 16) {
-                            if spotifyAccess == false {
-                                Button {
-                                    tabSelection = 2
-                                } label: {
-                                    SpotifyWarning()
+                        ScrollView {
+                            VStack(alignment: .leading, spacing: 16) {
+                                if spotifyAccess == false {
+                                    Button {
+                                        tabSelection = 2
+                                    } label: {
+                                        SpotifyWarning()
+                                    }
                                 }
-
+                                BarChart(sadness: viewModel.sadness)
+                                Spacer()
                             }
-                            Spacer()
-                        }
-                        .padding([.leading], 8)
-                        .padding([.trailing, .top, .bottom], 32)
+                            .padding([.leading], 12)
+                            .padding([.trailing, .top, .bottom], 32)
+                        }.padding([.bottom], 1)
                     )
                         .toolbar {
                             ToolbarItem(placement: .principal) {

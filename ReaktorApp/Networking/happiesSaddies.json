@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "major_sum": 0.0,
+      "minor_sum": 3.0,
+      "played_at": "2022-11-01T00:00:00Z",
+      "sadness_indes": 0.75,
+      "unconf_sum": 1.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Sad"
+    },
+    {
+      "id": 2,
+      "major_sum": 2.0,
+      "minor_sum": 0.0,
+      "played_at": "2022-11-02T00:00:00Z",
+      "sadness_indes": 0.0,
+      "unconf_sum": 0.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Sad"
+    },
+    {
+      "id": 3,
+      "major_sum": 12.0,
+      "minor_sum": 12.0,
+      "played_at": "2022-11-03T00:00:00Z",
+      "sadness_indes": 0.4444444444,
+      "unconf_sum": 3.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Sad"
+    },
+    {
+      "id": 4,
+      "major_sum": 1.0,
+      "minor_sum": 1.0,
+      "played_at": "2022-11-04T00:00:00Z",
+      "sadness_indes": 0.5,
+      "unconf_sum": 0.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Sad"
+    },
+    {
+      "id": 5,
+      "major_sum": 5.0,
+      "minor_sum": 8.0,
+      "played_at": "2022-11-05T00:00:00Z",
+      "sadness_indes": 0.533333,
+      "unconf_sum": 2.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Sad"
+    },
+    {
+      "sadness_indes": 0.0,
+      "id": 1,
+      "major_sum": 0.0,
+      "minor_sum": 3.0,
+      "played_at": "2022-11-01T00:00:00Z",
+      "unconf_sum": 1.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Happy"
+    },
+    {
+      "sadness_indes": 1.0,
+      "id": 2,
+      "major_sum": 2.0,
+      "minor_sum": 0.0,
+      "played_at": "2022-11-02T00:00:00Z",
+      "unconf_sum": 0.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Happy"
+    },
+    {
+      "sadness_indes": 0.4444444444,
+      "id": 3,
+      "major_sum": 12.0,
+      "minor_sum": 12.0,
+      "played_at": "2022-11-03T00:00:00Z",
+      "unconf_sum": 3.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Happy"
+    },
+    {
+      "sadness_indes": 0.5,
+      "id": 4,
+      "major_sum": 1.0,
+      "minor_sum": 1.0,
+      "played_at": "2022-11-04T00:00:00Z",
+      "unconf_sum": 0.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Happy"
+    },
+    {
+      "sadness_indes": 0.3333333333,
+      "id": 5,
+      "major_sum": 5.0,
+      "minor_sum": 8.0,
+      "played_at": "2022-11-05T00:00:00Z",
+      "unconf_sum": 2.0,
+      "user_uuid": "861B760D-EE8A-4906-BAF3-DCEBA08C6243",
+      "type": "Happy"
+    }
+  ]

@@ -28,6 +28,8 @@
 		4E788EC42916DDBD00C794E3 /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EC32916DDBD00C794E3 /* IntroScreen.swift */; };
 		4E7B16C52916F8E500AE426A /* weeklySadness.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E7B16C42916F8E500AE426A /* weeklySadness.json */; };
 		4E7B16C72916F92200AE426A /* SadnessIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B16C62916F92200AE426A /* SadnessIndex.swift */; };
+		4E7B16C929170DF200AE426A /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B16C829170DF200AE426A /* BarChart.swift */; };
+		4E7B16CB2917139500AE426A /* happiesSaddies.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E7B16CA2917139500AE426A /* happiesSaddies.json */; };
 		88CFD40226136D370090B26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40126136D370090B26A /* AppDelegate.swift */; };
 		88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40326136D370090B26A /* SceneDelegate.swift */; };
 		88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CFD40A26136D3A0090B26A /* Assets.xcassets */; };
@@ -96,6 +98,8 @@
 		4E788EC32916DDBD00C794E3 /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		4E7B16C42916F8E500AE426A /* weeklySadness.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weeklySadness.json; sourceTree = "<group>"; };
 		4E7B16C62916F92200AE426A /* SadnessIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadnessIndex.swift; sourceTree = "<group>"; };
+		4E7B16C829170DF200AE426A /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		4E7B16CA2917139500AE426A /* happiesSaddies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happiesSaddies.json; sourceTree = "<group>"; };
 		4EE8FCDA2915ADA900EA7150 /* Reaktor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reaktor.entitlements; sourceTree = "<group>"; };
 		88CFD3FE26136D370090B26A /* Reaktor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reaktor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CFD40126136D370090B26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				4E788EAD2916686D00C794E3 /* SpotifyWarning.swift */,
 				4E788EB0291668C700C794E3 /* UIExtensions.swift */,
 				4E788EC32916DDBD00C794E3 /* IntroScreen.swift */,
+				4E7B16C829170DF200AE426A /* BarChart.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 		B9AF437228F979DD00ED73C1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4E7B16CA2917139500AE426A /* happiesSaddies.json */,
 				4E7B16C42916F8E500AE426A /* weeklySadness.json */,
 				88CFD43426136D500090B26A /* API */,
 			);
@@ -477,6 +483,7 @@
 			files = (
 				88CFD40E26136D3A0090B26A /* LaunchScreen.storyboard in Resources */,
 				4E7B16C52916F8E500AE426A /* weeklySadness.json in Resources */,
+				4E7B16CB2917139500AE426A /* happiesSaddies.json in Resources */,
 				88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +530,7 @@
 				4E788EA829165DEB00C794E3 /* VMState.swift in Sources */,
 				4E788EBD29168E8F00C794E3 /* DetailsViewModel.swift in Sources */,
 				4E788EAA291665BA00C794E3 /* Strings.swift in Sources */,
+				4E7B16C929170DF200AE426A /* BarChart.swift in Sources */,
 				4E788EA629165D4000C794E3 /* SettingsContainer.swift in Sources */,
 				4E788EBB291681C700C794E3 /* HealthAccess.swift in Sources */,
 				4E788EA229164FAA00C794E3 /* MainView.swift in Sources */,
@@ -715,6 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG78ZF867D;
 				INFOPLIST_FILE = ReaktorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -737,6 +746,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG78ZF867D;
 				INFOPLIST_FILE = ReaktorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
