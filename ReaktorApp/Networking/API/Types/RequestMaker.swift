@@ -4,4 +4,11 @@ import Foundation
 protocol RequestMaker {
     associatedtype EndpointType
     func makeRequest() throws -> URLRequest
+    var type: RequestType { get }
+}
+
+enum RequestType {
+    case user
+    case health
+    case graphs
 }

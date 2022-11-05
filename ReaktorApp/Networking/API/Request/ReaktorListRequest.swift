@@ -2,10 +2,11 @@ import Foundation
 
 typealias ReqResCapsule = RequestMaker & ResponseParser
 
-/// A request for a list of Reaktor
-struct ReaktorListRequest: ReqResCapsule {
+struct ReaktorListRequest: RequestMaker & ResponseParser {
     typealias ResponseType = [Graph]
     typealias EndpointType = Endpoint
+
+    var type: RequestType = .graphs
 
     func makeRequest() throws -> URLRequest {
         let url = try EndpointType.graphs.url

@@ -12,23 +12,31 @@ struct ReaktorContainer: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 16) {
                 switch viewModel.state {
                     case .loading:
                         ProgressView()
-                            .navigationTitle(Text("Loading!"))
+                            .navigationTitle(Text("Loading..."))
                     case .completed:
-                        ReaktorList(
-                            searchText: $viewModel.searchTerm,
-                            graphs: viewModel.displayableReaktor
-                        )
-                        .navigationTitle(Text("Cat Facts!"))
+                    LinearGradient.heale.overlay(
+                        VStack(alignment: .leading, spacing: 16) {
+                            SpotifyWarning()
+                            Spacer()
+                        }
+                        .padding([.leading], 8)
+                        .padding([.trailing, .top, .bottom], 32)
+                    )
+                        .toolbar {
+                            ToolbarItem(placement: .principal) {
+                                HealeHeader().padding([.top], 64)
+                            }
+                        }
                     case .error(let reason):
                         ErrorPage(errorReason: reason) {
                             Task {
-                                await viewModel.fetchFacts()
+                                await viewModel.fetchGraphs()
                             }
-                        }.navigationTitle(Text("Oh No!"))
+                        }.navigationTitle(Text("Error :("))
                 }
             }
             .onAppear(perform: viewModel.onAppear)

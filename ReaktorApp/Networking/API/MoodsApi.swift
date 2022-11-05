@@ -43,7 +43,7 @@ final class MoodsApi: API {
         responseValidators: [HTTPResponseValidator] = [HTTPStatusCodeValidator(), HTTPContentTypeValidator()]) async throws -> T.ResponseType {
             let request = try endpoint.makeRequest()
 
-            let (data, response) = try await session.data(for: request)
+            let (data, response) = try await method == .GET ? session.data(for: request) : session.upload(for: request, from: Data())
 
             let parsedData = try endpoint.parse(data)
 
@@ -61,16 +61,39 @@ final class MoodsApi: API {
 
 // MARK: - Deprecated APIs
 extension MoodsApi {
+    // Limits of this approach:
+    // Cancellability of this task - Once created it cannot be cancelled.
+    // We could add a local storage/memory with identifiers to track the task and cancel when/if necessary.
+    //
+
     @available(*, deprecated, message: "Use async version")
     func getGraphs(completion: @escaping ([Graph]?, Error?) -> Void) {
-        // Limits of this approach:
-        // Cancellability of this task - Once created it cannot be cancelled.
-        // We could add a local storage/memory with identifiers to track the task and cancel when/if necessary.
-        //
         Task {
             do {
                 let graphs: [Graph] = try await request(ReaktorListRequest())
                 completion(graphs, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    func getUser(completion: @escaping (User?, Error?) -> Void) {
+        Task {
+            do {
+                let user: User = try await request(UserRequest(), method: .GET)
+                completion(user, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    func postUser(completion: @escaping (User?, Error?) -> Void) {
+        Task {
+            do {
+                let user: User = try await request(UserRequest(), method: .POST)
+                completion(user, nil)
             } catch {
                 completion(nil, error)
             }

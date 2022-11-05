@@ -1,26 +1,11 @@
 import Foundation
 import SwiftUI
 
-extension ReaktorViewModel {
-    enum State: Equatable {
-        case loading
-        case completed
-        case error(String)
-    }
-}
-
 final class ReaktorViewModel: ObservableObject {
-    /// The displayable values
-    var displayableReaktor: [Graph] {
-        searchTerm.isEmpty ? graphs : graphs
-            .lazy
-            .filter { $0.text.localizedCaseInsensitiveContains(searchTerm) }
-    }
 
-    @Published var state: State = .loading
-    @Published var searchTerm: String = ""
+    @Published var state: VMState = .loading
 
-    private var graphs: [Graph]
+    var graphs: [Graph]
     private var api: API
 
     init(api: API = MoodsApi(),
@@ -36,16 +21,20 @@ final class ReaktorViewModel: ObservableObject {
 
         if state == .loading {
             Task {
-                await fetchFacts()
+                await fetchGraphs()
             }
         }
     }
 
     @MainActor
-    func fetchFacts() async {
+    func fetchGraphs() async {
+
+        self.state = .completed
+        return
+
         do {
-            let facts: [Graph] = try await api.request(ReaktorListRequest(), method: .GET)
-            self.graphs = facts
+            let graphs: [Graph] = try await api.request(ReaktorListRequest(), method: .GET)
+            self.graphs = graphs
             self.state = .completed
         } catch {
             self.graphs = []

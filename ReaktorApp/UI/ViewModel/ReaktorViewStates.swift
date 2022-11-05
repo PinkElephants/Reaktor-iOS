@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ReaktorList: View {
-
-    @Binding var searchText: String
+    
     var graphs: [Graph]
 
     var body: some View {
@@ -22,17 +21,19 @@ struct ReaktorList: View {
                     )
                 }
             } header: {
-                searchHeader
+                // None?
             }
         }
-        .listStyle(PlainListStyle())
+        .listStyle(.inset)
         .frame(maxHeight: .infinity)
     }
+}
 
-    var searchHeader: some View {
-        TextField("Search", text: $searchText)
-            .contentShape(Rectangle())
-            .font(.callout)
-            .frame(minHeight: 40)
+struct ReaktorList_Previews: PreviewProvider {
+
+    static var previews: some View {
+        return Group {
+            ReaktorList(graphs: [])
+        }
     }
 }

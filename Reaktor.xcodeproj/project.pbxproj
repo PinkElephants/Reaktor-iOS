@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		4E62607429145F3D000ACE53 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62607329145F3D000ACE53 /* HealthKit.framework */; };
 		4E6C03C92915A03C00F44669 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C03C82915A03C00F44669 /* Graph.swift */; };
+		4E788EA229164FAA00C794E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EA129164FAA00C794E3 /* MainView.swift */; };
+		4E788EA429165D3500C794E3 /* DetailsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EA329165D3500C794E3 /* DetailsContainer.swift */; };
+		4E788EA629165D4000C794E3 /* SettingsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EA529165D4000C794E3 /* SettingsContainer.swift */; };
+		4E788EA829165DEB00C794E3 /* VMState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EA729165DEB00C794E3 /* VMState.swift */; };
+		4E788EAA291665BA00C794E3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EA9291665BA00C794E3 /* Strings.swift */; };
+		4E788EAC2916683200C794E3 /* HealeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EAB2916683200C794E3 /* HealeHeader.swift */; };
+		4E788EAE2916686D00C794E3 /* SpotifyWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EAD2916686D00C794E3 /* SpotifyWarning.swift */; };
+		4E788EB1291668C700C794E3 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EB0291668C700C794E3 /* UIExtensions.swift */; };
+		4E788EB3291669B100C794E3 /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EB2291669B100C794E3 /* UserHeader.swift */; };
+		4E788EB52916717D00C794E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EB42916717D00C794E3 /* User.swift */; };
+		4E788EB72916729700C794E3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EB62916729700C794E3 /* SettingsViewModel.swift */; };
+		4E788EB92916734600C794E3 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EB82916734600C794E3 /* UserRequest.swift */; };
+		4E788EBB291681C700C794E3 /* HealthAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EBA291681C700C794E3 /* HealthAccess.swift */; };
+		4E788EBD29168E8F00C794E3 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EBC29168E8F00C794E3 /* DetailsViewModel.swift */; };
 		88CFD40226136D370090B26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40126136D370090B26A /* AppDelegate.swift */; };
 		88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40326136D370090B26A /* SceneDelegate.swift */; };
 		88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CFD40A26136D3A0090B26A /* Assets.xcassets */; };
@@ -58,6 +72,20 @@
 /* Begin PBXFileReference section */
 		4E62607329145F3D000ACE53 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		4E6C03C82915A03C00F44669 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		4E788EA129164FAA00C794E3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4E788EA329165D3500C794E3 /* DetailsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContainer.swift; sourceTree = "<group>"; };
+		4E788EA529165D4000C794E3 /* SettingsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainer.swift; sourceTree = "<group>"; };
+		4E788EA729165DEB00C794E3 /* VMState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMState.swift; sourceTree = "<group>"; };
+		4E788EA9291665BA00C794E3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		4E788EAB2916683200C794E3 /* HealeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealeHeader.swift; sourceTree = "<group>"; };
+		4E788EAD2916686D00C794E3 /* SpotifyWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWarning.swift; sourceTree = "<group>"; };
+		4E788EB0291668C700C794E3 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		4E788EB2291669B100C794E3 /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
+		4E788EB42916717D00C794E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4E788EB62916729700C794E3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4E788EB82916734600C794E3 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		4E788EBA291681C700C794E3 /* HealthAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAccess.swift; sourceTree = "<group>"; };
+		4E788EBC29168E8F00C794E3 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		4EE8FCDA2915ADA900EA7150 /* Reaktor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reaktor.entitlements; sourceTree = "<group>"; };
 		88CFD3FE26136D370090B26A /* Reaktor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reaktor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CFD40126136D370090B26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +156,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4E788EAF2916687600C794E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4E788EAB2916683200C794E3 /* HealeHeader.swift */,
+				4E788EB2291669B100C794E3 /* UserHeader.swift */,
+				4E788EAD2916686D00C794E3 /* SpotifyWarning.swift */,
+				4E788EB0291668C700C794E3 /* UIExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		88CFD3F526136D370090B26A = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6C03C82915A03C00F44669 /* Graph.swift */,
+				4E788EB42916717D00C794E3 /* User.swift */,
 				B9AF436C28F8CEDB00ED73C1 /* Types */,
 				88CFD43526136D610090B26A /* MoodsApi.swift */,
 				B9AF437728F9C7B500ED73C1 /* Validators */,
@@ -212,9 +252,13 @@
 		B9AF434728F8840700ED73C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E788EAF2916687600C794E3 /* Helpers */,
 				B9AF433C28F85F6E00ED73C1 /* ReaktorContainer.swift */,
+				4E788EA329165D3500C794E3 /* DetailsContainer.swift */,
+				4E788EA529165D4000C794E3 /* SettingsContainer.swift */,
 				B9AF435528F8B45600ED73C1 /* GraphRow.swift */,
 				B9AF436D28F8D03800ED73C1 /* ErrorPage.swift */,
+				4E788EA129164FAA00C794E3 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				B9AF436928F8CE9B00ED73C1 /* ReaktorListRequest.swift */,
+				4E788EB82916734600C794E3 /* UserRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -268,6 +313,8 @@
 			isa = PBXGroup;
 			children = (
 				B9AF434428F8765C00ED73C1 /* Model */,
+				4E788EA9291665BA00C794E3 /* Strings.swift */,
+				4E788EBA291681C700C794E3 /* HealthAccess.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -285,6 +332,9 @@
 			children = (
 				B9AF436428F8CD0400ED73C1 /* ReaktorViewModel.swift */,
 				B9AF434828F8841600ED73C1 /* ReaktorViewStates.swift */,
+				4E788EA729165DEB00C794E3 /* VMState.swift */,
+				4E788EB62916729700C794E3 /* SettingsViewModel.swift */,
+				4E788EBC29168E8F00C794E3 /* DetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -436,10 +486,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E788EB52916717D00C794E3 /* User.swift in Sources */,
 				88CFD43626136D610090B26A /* MoodsApi.swift in Sources */,
 				B9AF434128F8762F00ED73C1 /* Helpers.swift in Sources */,
+				4E788EAC2916683200C794E3 /* HealeHeader.swift in Sources */,
+				4E788EB1291668C700C794E3 /* UIExtensions.swift in Sources */,
+				4E788EAE2916686D00C794E3 /* SpotifyWarning.swift in Sources */,
 				B9AF436528F8CD0400ED73C1 /* ReaktorViewModel.swift in Sources */,
 				B9AF433B28F857FE00ED73C1 /* Endpoint.swift in Sources */,
+				4E788EA429165D3500C794E3 /* DetailsContainer.swift in Sources */,
 				B9AF436728F8CD1000ED73C1 /* Utils.swift in Sources */,
 				88CFD40226136D370090B26A /* AppDelegate.swift in Sources */,
 				B9AF437928F9C7BD00ED73C1 /* Validators.swift in Sources */,
@@ -447,11 +502,20 @@
 				4E6C03C92915A03C00F44669 /* Graph.swift in Sources */,
 				B9AF435628F8B45600ED73C1 /* GraphRow.swift in Sources */,
 				B9AF436E28F8D03800ED73C1 /* ErrorPage.swift in Sources */,
+				4E788EA829165DEB00C794E3 /* VMState.swift in Sources */,
+				4E788EBD29168E8F00C794E3 /* DetailsViewModel.swift in Sources */,
+				4E788EAA291665BA00C794E3 /* Strings.swift in Sources */,
+				4E788EA629165D4000C794E3 /* SettingsContainer.swift in Sources */,
+				4E788EBB291681C700C794E3 /* HealthAccess.swift in Sources */,
+				4E788EA229164FAA00C794E3 /* MainView.swift in Sources */,
+				4E788EB92916734600C794E3 /* UserRequest.swift in Sources */,
+				4E788EB3291669B100C794E3 /* UserHeader.swift in Sources */,
 				B9AF433D28F85F6E00ED73C1 /* ReaktorContainer.swift in Sources */,
 				B9AF435B28F8BEF800ED73C1 /* RequestMaker.swift in Sources */,
 				88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */,
 				B9AF436A28F8CE9B00ED73C1 /* ReaktorListRequest.swift in Sources */,
 				B9AF435D28F8BF0500ED73C1 /* ResponseParser.swift in Sources */,
+				4E788EB72916729700C794E3 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

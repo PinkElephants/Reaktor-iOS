@@ -2,7 +2,7 @@ import Foundation
 
 /// The Endpoint contains the base URL and structure to build an URL
 struct Endpoint {
-    let baseURL = URL(string: "https://api.npoint.io")!
+    let baseURL = URL(string: "https://reactor-api-ne3ne.ondigitalocean.app")!
 
     private let path: String
     private let queryItems: [URLQueryItem]
@@ -33,5 +33,9 @@ extension Endpoint {
 extension Endpoint {
     static var graphs: Endpoint {
         Endpoint(path: "/graphs")
+    }
+
+    static func user(uuid: String) -> Endpoint {
+        Endpoint(path: "/user/\(uuid)")
     }
 }
