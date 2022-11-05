@@ -152,7 +152,10 @@ extension HealthAccess {
             HKQuantityTypeIdentifier.walkingHeartRateAverage.rawValue,
             HKQuantityTypeIdentifier.stepCount.rawValue,
             HKQuantityTypeIdentifier.distanceWalkingRunning.rawValue,
-            HKQuantityTypeIdentifier.sixMinuteWalkTestDistance.rawValue
+            HKQuantityTypeIdentifier.sixMinuteWalkTestDistance.rawValue,
+            HKObjectType.workoutType().identifier,
+            HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!.identifier,
+            HKObjectType.activitySummaryType().identifier
         ]
 
         return typeIdentifiers.compactMap { getSampleType(for: $0) }

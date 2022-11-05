@@ -25,6 +25,8 @@
 		4E788EBD29168E8F00C794E3 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EBC29168E8F00C794E3 /* DetailsViewModel.swift */; };
 		4E788EC02916ADCA00C794E3 /* HealthDataQuant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EBF2916ADCA00C794E3 /* HealthDataQuant.swift */; };
 		4E788EC22916C53500C794E3 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E788EC12916C53500C794E3 /* Charts.framework */; };
+		4E788EC42916DDBD00C794E3 /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EC32916DDBD00C794E3 /* IntroScreen.swift */; };
+		4E7B16C52916F8E500AE426A /* weeklySadness.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E7B16C42916F8E500AE426A /* weeklySadness.json */; };
 		88CFD40226136D370090B26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40126136D370090B26A /* AppDelegate.swift */; };
 		88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40326136D370090B26A /* SceneDelegate.swift */; };
 		88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CFD40A26136D3A0090B26A /* Assets.xcassets */; };
@@ -90,6 +92,8 @@
 		4E788EBC29168E8F00C794E3 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		4E788EBF2916ADCA00C794E3 /* HealthDataQuant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataQuant.swift; sourceTree = "<group>"; };
 		4E788EC12916C53500C794E3 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = System/Library/Frameworks/Charts.framework; sourceTree = SDKROOT; };
+		4E788EC32916DDBD00C794E3 /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
+		4E7B16C42916F8E500AE426A /* weeklySadness.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weeklySadness.json; sourceTree = "<group>"; };
 		4EE8FCDA2915ADA900EA7150 /* Reaktor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reaktor.entitlements; sourceTree = "<group>"; };
 		88CFD3FE26136D370090B26A /* Reaktor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reaktor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CFD40126136D370090B26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				4E788EB2291669B100C794E3 /* UserHeader.swift */,
 				4E788EAD2916686D00C794E3 /* SpotifyWarning.swift */,
 				4E788EB0291668C700C794E3 /* UIExtensions.swift */,
+				4E788EC32916DDBD00C794E3 /* IntroScreen.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 		B9AF437228F979DD00ED73C1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4E7B16C42916F8E500AE426A /* weeklySadness.json */,
 				88CFD43426136D500090B26A /* API */,
 			);
 			path = Networking;
@@ -467,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CFD40E26136D3A0090B26A /* LaunchScreen.storyboard in Resources */,
+				4E7B16C52916F8E500AE426A /* weeklySadness.json in Resources */,
 				88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +524,7 @@
 				4E788EA229164FAA00C794E3 /* MainView.swift in Sources */,
 				4E788EC02916ADCA00C794E3 /* HealthDataQuant.swift in Sources */,
 				4E788EB92916734600C794E3 /* UserRequest.swift in Sources */,
+				4E788EC42916DDBD00C794E3 /* IntroScreen.swift in Sources */,
 				4E788EB3291669B100C794E3 /* UserHeader.swift in Sources */,
 				B9AF433D28F85F6E00ED73C1 /* ReaktorContainer.swift in Sources */,
 				B9AF435B28F8BEF800ED73C1 /* RequestMaker.swift in Sources */,

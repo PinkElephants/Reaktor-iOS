@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        let hostController = UIHostingController(rootView: MainView())
+        let hostController = UIHostingController(rootView: IntroScreen(type: .main))
 
         window.rootViewController = hostController
 

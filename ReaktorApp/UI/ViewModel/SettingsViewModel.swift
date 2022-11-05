@@ -43,6 +43,7 @@ final class SettingsViewModel: ObservableObject {
                             } ?? []
 
                             let json = self?.json(from: parsedData)
+                            print(json)
                         }
 
                         HealthAccess.shared.getWeeklyRuns { objects, error in
@@ -57,6 +58,7 @@ final class SettingsViewModel: ObservableObject {
                                 return meters >= 250 ? data : nil
                             } ?? []
                             let json = self?.json(from: parsedData)
+                            print(json)
                         }
 
                         HealthAccess.shared.getWeeklyMeanHR { objects, error in
@@ -70,6 +72,7 @@ final class SettingsViewModel: ObservableObject {
                                 return data
                             } ?? []
                             let json = self?.json(from: parsedData)
+                            print(json)
                         }
                         HealthAccess.shared.getWeeklyRestingHR { objects, error in
                             let parsedData: [HealthDataQuant] = objects?.enumerated().map { (index, sample) in
@@ -82,6 +85,7 @@ final class SettingsViewModel: ObservableObject {
                                 return data
                             } ?? []
                             let json = self?.json(from: parsedData)
+                            print(json)
                         }
                     }
                 }

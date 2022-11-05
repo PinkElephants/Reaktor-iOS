@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainView: View {
 
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     @State var selection = 0
     @State var spotifyAccess = false
 
@@ -32,6 +34,9 @@ struct MainView: View {
                     Label("User profile", systemImage: "person.crop.circle")
                 }.tag(2)
         }
+        .navigationBarTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 
