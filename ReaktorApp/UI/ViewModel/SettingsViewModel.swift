@@ -32,37 +32,72 @@ final class SettingsViewModel: ObservableObject {
                         self?.healthState = healthAuthorization
 
                         HealthAccess.shared.getWeeklySteps { objects, error in
-                            let parsedData: [String] = objects?.compactMap { sample in
+                            let parsedData: [HealthDataQuant] = objects?.enumerated().map { (index, sample) in
 
                                 let quantitySample = sample as! HKQuantitySample
-                                let data: String = """
-                                { "count": \(quantitySample.quantity), "start": \(quantitySample.startDate), "end": \(quantitySample.endDate) }
-                                """
+                                let count = quantitySample.quantity.doubleValue(for: HKUnit(from: "count"))
+
+                                let data = HealthDataQuant(id: index, count: Int(count), startDate: quantitySample.startDate, endDate: quantitySample.endDate)
 
                                 return data
                             } ?? []
-                            print(objects)
+
+                            let json = self?.json(from: parsedData)
                         }
 
                         HealthAccess.shared.getWeeklyRuns { objects, error in
-                            let longWalkRuns: [HKQuantitySample] = objects?.compactMap {
-                                let quantitySample = $0 as! HKQuantitySample
+
+                            let parsedData: [HealthDataQuant] = objects?.enumerated().compactMap { (index, sample) in
+
+                                let quantitySample = sample as! HKQuantitySample
                                 let meters = quantitySample.quantity.doubleValue(for: HKUnit(from: "m"))
-                                return meters >= 500 ? quantitySample : nil
+
+                                let data = HealthDataQuant(id: index, count: Int(meters), startDate: quantitySample.startDate, endDate: quantitySample.endDate)
+
+                                return meters >= 250 ? data : nil
                             } ?? []
-                            print(objects)
+                            let json = self?.json(from: parsedData)
                         }
 
                         HealthAccess.shared.getWeeklyMeanHR { objects, error in
-                            print(objects)
+                            let parsedData: [HealthDataQuant] = objects?.enumerated().map { (index, sample) in
+
+                                let quantitySample = sample as! HKQuantitySample
+                                let count = quantitySample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+
+                                let data = HealthDataQuant(id: index, count: Int(count), startDate: quantitySample.startDate, endDate: quantitySample.endDate)
+
+                                return data
+                            } ?? []
+                            let json = self?.json(from: parsedData)
                         }
                         HealthAccess.shared.getWeeklyRestingHR { objects, error in
-                            let number1 = objects![0].quantity.doubleValue(for: HKUnit(from: "count/min"))
-                            print(objects)
+                            let parsedData: [HealthDataQuant] = objects?.enumerated().map { (index, sample) in
+
+                                let quantitySample = sample as! HKQuantitySample
+                                let count = quantitySample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+
+                                let data = HealthDataQuant(id: index, count: Int(count), startDate: quantitySample.startDate, endDate: quantitySample.endDate)
+
+                                return data
+                            } ?? []
+                            let json = self?.json(from: parsedData)
                         }
                     }
                 }
             }
+        }
+    }
+
+    func json(from object: Codable) -> String? {
+        let enc = JSONEncoder()
+        enc.outputFormatting = [.prettyPrinted , .sortedKeys]
+        enc.dateEncodingStrategy = .iso8601
+        if let data = try? enc.encode(object) {
+            let jsonString = String(data: data, encoding: .utf8)
+            return jsonString
+        } else {
+            return nil
         }
     }
 

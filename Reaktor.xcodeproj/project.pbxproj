@@ -23,6 +23,7 @@
 		4E788EB92916734600C794E3 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EB82916734600C794E3 /* UserRequest.swift */; };
 		4E788EBB291681C700C794E3 /* HealthAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EBA291681C700C794E3 /* HealthAccess.swift */; };
 		4E788EBD29168E8F00C794E3 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EBC29168E8F00C794E3 /* DetailsViewModel.swift */; };
+		4E788EC02916ADCA00C794E3 /* HealthDataQuant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E788EBF2916ADCA00C794E3 /* HealthDataQuant.swift */; };
 		88CFD40226136D370090B26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40126136D370090B26A /* AppDelegate.swift */; };
 		88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40326136D370090B26A /* SceneDelegate.swift */; };
 		88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CFD40A26136D3A0090B26A /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 		4E788EB82916734600C794E3 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		4E788EBA291681C700C794E3 /* HealthAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAccess.swift; sourceTree = "<group>"; };
 		4E788EBC29168E8F00C794E3 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		4E788EBF2916ADCA00C794E3 /* HealthDataQuant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataQuant.swift; sourceTree = "<group>"; };
 		4EE8FCDA2915ADA900EA7150 /* Reaktor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reaktor.entitlements; sourceTree = "<group>"; };
 		88CFD3FE26136D370090B26A /* Reaktor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reaktor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CFD40126136D370090B26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		88CFD43426136D500090B26A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				4E788EBF2916ADCA00C794E3 /* HealthDataQuant.swift */,
 				4E6C03C82915A03C00F44669 /* Graph.swift */,
 				4E788EB42916717D00C794E3 /* User.swift */,
 				B9AF436C28F8CEDB00ED73C1 /* Types */,
@@ -508,6 +511,7 @@
 				4E788EA629165D4000C794E3 /* SettingsContainer.swift in Sources */,
 				4E788EBB291681C700C794E3 /* HealthAccess.swift in Sources */,
 				4E788EA229164FAA00C794E3 /* MainView.swift in Sources */,
+				4E788EC02916ADCA00C794E3 /* HealthDataQuant.swift in Sources */,
 				4E788EB92916734600C794E3 /* UserRequest.swift in Sources */,
 				4E788EB3291669B100C794E3 /* UserHeader.swift in Sources */,
 				B9AF433D28F85F6E00ED73C1 /* ReaktorContainer.swift in Sources */,
