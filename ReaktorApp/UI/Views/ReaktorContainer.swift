@@ -9,10 +9,12 @@ import SwiftUI
 struct ReaktorContainer: View {
 
     @State var spotifyAccess: Bool = false
+    @State var tabSelection: Int
     @StateObject var viewModel: ReaktorViewModel = .init()
 
-    init(spotifyAccess: State<Bool>) {
+    init(spotifyAccess: State<Bool>, tabSelection: State<Int>) {
         self._spotifyAccess = spotifyAccess
+        self._tabSelection = tabSelection
     }
 
     var body: some View {
@@ -26,7 +28,12 @@ struct ReaktorContainer: View {
                     LinearGradient.heale.overlay(
                         VStack(alignment: .leading, spacing: 16) {
                             if spotifyAccess == false {
-                                SpotifyWarning()
+                                Button {
+                                    tabSelection = 2
+                                } label: {
+                                    SpotifyWarning()
+                                }
+
                             }
                             Spacer()
                         }
@@ -74,9 +81,10 @@ struct ReaktorContainer_Previews: PreviewProvider {
     static var previews: some View {
 
         @State var access: Bool = true
+        @State var selection: Int = 0
 
         return Group {
-            ReaktorContainer(spotifyAccess: _access)
+            ReaktorContainer(spotifyAccess: _access, tabSelection: _selection)
                 .previewDisplayName("Content State")
         }
     }

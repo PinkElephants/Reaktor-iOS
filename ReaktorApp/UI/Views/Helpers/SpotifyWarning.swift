@@ -14,7 +14,7 @@ struct SpotifyWarning: View {
                 .resizable()
                 .frame(width: 32, height: 32)
                 .clipShape(Circle())
-            Text(Strings.enableSpotify.rawValue).bold()
+            Text(Strings.enableSpotify.rawValue).bold().multilineTextAlignment(.leading)
         }
         .padding(12)
         .background(Color.white)

@@ -15,7 +15,7 @@ struct MainView: View {
     var body: some View {
 
         TabView(selection: $selection) {
-            ReaktorContainer(spotifyAccess: _spotifyAccess)
+            ReaktorContainer(spotifyAccess: _spotifyAccess, tabSelection: _selection)
                 .padding([.bottom], 16)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
