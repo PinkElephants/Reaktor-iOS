@@ -17,7 +17,7 @@ struct ScorePopover: View {
                     Spacer()
                 }
                 HStack {
-                    Text(Strings.yourScoreText.rawValue).font(.title3).bold()
+                    Text(Strings.yourScoreText7.rawValue).font(.title3).bold()
                     Spacer()
                 }
                 Spacer()

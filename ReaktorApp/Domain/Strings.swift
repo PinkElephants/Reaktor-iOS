@@ -26,5 +26,13 @@ enum Strings: String {
     case introTwitterText = "With a help of Natural Language Processing and Sentiment Analysis I will be able to track some changes in your mood and use it in the Health Score as well"
 
     case yourScoreHeader = "Your wellbeing score."
-    case yourScoreText = "It defines how well you cope with your life right now"
+    case yourScoreText7 =
+    """
+    It seems like your activity level is fine, however, our algorithm says you've started to listen to a music with a less positive mood and emotional tone of your Tweets shifted downward.
+
+    Consider resting more to avoid mental overload.
+    """
+    case yourScoreText10 = "You seem to cope well with your life right now. Good job!"
+    case yourScoreText5 = "Manageable"
+    case yourScoreText3 = "Bad"
 }
