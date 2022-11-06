@@ -10,6 +10,7 @@ struct ReaktorContainer: View {
 
     @State var spotifyAccess: Bool = false
     @State var tabSelection: Int
+    @State var showingPopup = false
     @StateObject var viewModel: ReaktorViewModel = .init()
 
     init(spotifyAccess: State<Bool>, tabSelection: State<Int>) {
@@ -25,7 +26,12 @@ struct ReaktorContainer: View {
                     LinearGradient.heale.overlay(
                         ScrollView {
                             VStack(alignment: .leading, spacing: 16) {
-                                ScoreHeader()
+                                Button {
+                                    showingPopup = true
+                                } label: {
+                                    ScoreHeader()
+                                }
+
                                 if spotifyAccess == false {
                                     Button {
                                         tabSelection = 2
@@ -53,7 +59,9 @@ struct ReaktorContainer: View {
                             }
                         }.navigationTitle(Text("Error :("))
                 }
-            }
+            }.popover(isPresented: $showingPopup, content: {
+                ScorePopover().ignoresSafeArea()
+            })
             .onAppear(perform: viewModel.onAppear)
         }
     }

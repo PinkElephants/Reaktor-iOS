@@ -24,4 +24,7 @@ enum Strings: String {
     case introSpotifyText = "But according to some researches your music is telling about you way more than you think. If you provide me the access to your spotify account, I will be analyzing last 50 tracks you have listened and the results will also be a part of your health score"
     case introTwitterHeader = "Also, I can analyze what you write on Twitter"
     case introTwitterText = "With a help of Natural Language Processing and Sentiment Analysis I will be able to track some changes in your mood and use it in the Health Score as well"
+
+    case yourScoreHeader = "Your wellbeing score."
+    case yourScoreText = "It defines how well you cope with your life right now"
 }
